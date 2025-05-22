@@ -1,0 +1,29 @@
+<button class="btn btn-secondary mb-3" (click)="goBack()">←</button>
+
+<div class="container mt-4">
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h3 class="card-title">{{ post.title }}</h3>
+      <p class="text-muted mb-1"> Posted by <strong>{{ post.author }}</strong> | {{ post.createdAt | date:'medium' }}
+      </p>
+      <hr>
+      <p class="card-text">{{ post.content }}</p>
+    </div>
+  </div>
+  <div class="mt-4">
+    <h5 class="mb-3">💬 Comments</h5>
+    <div *ngFor="let comment of comments" class="mb-2">
+      <div class="p-3 bg-light rounded shadow-sm">
+        <p class="mb-1"><strong>{{ comment.user }}</strong> <small class="text-muted">| {{ comment.createdAt |
+            date:'short' }}</small></p>
+        <p class="mb-0">{{ comment.content }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4">
+    <h6>Add a Comment</h6> <textarea class="form-control mb-2" [(ngModel)]="newComment" rows="3"
+      placeholder="Write your comment..."></textarea> <button class="btn btn-primary btn-sm"
+      (click)="submitComment()">Post Comment</button>
+  </div>
+
+</div>

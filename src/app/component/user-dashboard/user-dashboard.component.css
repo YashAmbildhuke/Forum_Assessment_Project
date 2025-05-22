@@ -1,0 +1,11 @@
+.card {
+  border-radius: 1rem;
+  transition: 0.3s;
+  background-color: rgb(164, 211, 211);
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.btn-secondary{background-color: rgb(24, 96, 205);}

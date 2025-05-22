@@ -1,0 +1,56 @@
+<button class="btn btn-secondary mb-3" (click)="goBack()">←</button>
+
+<div class="container mt-4">
+  <h2 class="mb-4">Sample Assessment</h2>
+
+  <form>
+    <!-- Question 1 -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">1. Which concept of OOPS is used to hide internal implementation?</h5>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" (change)="checkAnswer('Inheritance', 'Abstraction')">
+          <label class="form-check-label">Inheritance</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" (change)="checkAnswer('Polymorphism', 'Abstraction')">
+          <label class="form-check-label">Polymorphism</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" (change)="checkAnswer('Abstraction', 'Abstraction')">
+          <label class="form-check-label">Abstraction</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" (change)="checkAnswer('Encapsulation', 'Abstraction')">
+          <label class="form-check-label">Encapsulation</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">2. Which package contains the Scanner class in Java?</h5>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" (change)="checkAnswer('java.util', 'java.util')">
+          <label class="form-check-label">java.util</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" (change)="checkAnswer('java.io', 'java.util')">
+          <label class="form-check-label">java.io</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" (change)="checkAnswer('java.lang', 'java.util')">
+          <label class="form-check-label">java.lang</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q2" (change)="checkAnswer('java.scan', 'java.util')">
+          <label class="form-check-label">java.scan</label>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+
+</div>

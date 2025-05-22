@@ -1,0 +1,22 @@
+<button class="btn btn-secondary mb-3" (click)="goBack()">←</button>
+
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-primary">Available Assessments</h2> <button class="btn btn-success"
+      routerLink="/create-assessment">+ Create New Assessment</button>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let assessment of assessments">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-dark">{{ assessment.title }}</h5>
+          <p class="card-text text-muted">{{ assessment.description }}</p>
+        </div>
+        <div class="card-footer bg-white border-0 d-flex justify-content-between"> <small class="text-secondary">Created
+            At: {{ assessment.createdAt | date:'short' }}</small> <button class="btn btn-primary btn-sm"
+            (click)="takeAssessment(assessment.id)"> Take Assessment </button> </div>
+      </div>
+    </div>
+  </div>
+
+</div>

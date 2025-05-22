@@ -1,0 +1,42 @@
+<div class="container mt-5">
+  <button class="btn btn-secondary mb-3" (click)="goBack()">←</button>
+  <h2 class="text-center mb-4">User Dashboard</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card text-center shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Total Posts</h5>
+          <p class="display-4">{{ totalPosts }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card text-center shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Total Assessments</h5>
+          <p class="display-4">{{ totalAssessments }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card text-center shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Average Score</h5>
+          <p class="display-4">{{ averageScore }}%</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card text-center shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Overall Performance</h5>
+          <p class="display-4">{{ overallPerformance }}%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

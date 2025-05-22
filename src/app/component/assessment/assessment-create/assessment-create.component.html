@@ -1,0 +1,36 @@
+<button class="btn btn-secondary mb-3" (click)="goBack()">←</button>
+
+<div class="container mt-4">
+  <h3 class="mb-3">Create Assessment</h3>
+
+  <div class="mb-3">
+    <label class="form-label">Question:</label>
+    <input type="text" class="form-control" [(ngModel)]="newQuestion" placeholder="Enter your question">
+  </div>
+
+  <div class="mb-3" *ngFor="let option of newOptions; let i = index">
+    <label class="form-label">Option {{ i + 1 }}:</label>
+    <input type="text" class="form-control" [(ngModel)]="newOptions[i]" placeholder="Option text">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Correct Answer:</label>
+    <select class="form-select" [(ngModel)]="correctAnswer">
+      <option *ngFor="let opt of newOptions" [value]="opt">{{ opt }}</option>
+    </select>
+  </div>
+
+  <button class="btn btn-info me-2" (click)="addQuestion()">Add Question</button>
+  <button class="btn btn-success" (click)="createAssessment()">Create Assessment</button>
+
+  <div class="mt-4">
+    <h5>Questions Preview:</h5>
+    <div *ngFor="let q of questions" class="mb-3">
+      <p><strong>{{ q.questionText }}</strong></p>
+      <div *ngFor="let opt of q.options">
+        <input type="radio" name="{{ q.questionText }}" (change)="checkAnswer(q, opt)"> {{ opt }}
+      </div>
+    </div>
+  </div>
+
+</div>
